@@ -64,12 +64,12 @@ body {
 
 .header {
   border-bottom: 1px solid var(--accent-color);
+  padding-top: 24px;
+  padding-bottom: 24px;
 }
 
 .header-container {
   display: flex;
-  padding-top: 24px;
-  padding-bottom: 24px;
 }
 
 .header-nav {
@@ -143,13 +143,21 @@ body {
 }
 
 .hero {
-  background: var(--dark-color);
-}
-
-.hero-container {
-  text-align: center;
   padding-top: 188px;
   padding-bottom: 188px;
+  text-align: center;
+  background-color: var(--dark-color);
+  max-width: 1440px;
+  height: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: linear-gradient(
+      var(--hero-background-color),
+      var(--hero-background-color)
+    ),
+    url(../images/fon-hero.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .hero-heading {
@@ -185,9 +193,9 @@ body {
 }
 
 .feature {
+  padding-top: 120px;
 }
 .section-feature {
-  padding-bottom: 0;
 }
 
 .feature-heading {
@@ -203,6 +211,17 @@ body {
 .feature-item {
   max-width: 264px;
 }
+.feature-picture {
+  width: 100%;
+  background: var(--light-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  margin-bottom: 8px;
+}
 
 .feature-title {
   font-weight: 500;
@@ -210,6 +229,7 @@ body {
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: var(--dark-color);
+  margin-bottom: 8px;
 }
 .feature-text {
   font-size: 16px;
@@ -254,6 +274,9 @@ body {
   gap: 24px;
 }
 .tem-item {
+  border-radius: 0px 0px 4px 4px;
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .tem-description {
@@ -261,9 +284,6 @@ body {
   background: #ffffff;
   padding-top: 32px;
   padding-bottom: 32px;
-  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
-    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
-  border-radius: 0px 0px 4px 4px;
 }
 
 .tem-title {
@@ -278,14 +298,95 @@ body {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
+  margin-bottom: 8px;
 }
+
+.tem-soc-list {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+.tem-soc-item {
+  width: 40px;
+  height: 40px;
+}
+
+.tem-soc-link {
+  width: 100%;
+  height: 100%;
+  background-color: var(--primary-brand-color);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tem-soc-icon {
+}
+
+.tem-soc-link:is(:hover, :focus) {
+  background-color: var(--pressed-state-color);
+}
+
+.customers {
+  padding-top: 130px;
+  padding-bottom: 120px;
+}
+
+.customers-heading {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  color: var(--dark-color);
+  text-align: center;
+  margin-bottom: 72px;
+}
+.customers-list {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+.customers-item {
+  width: calc((100%-120px) / 6);
+  height: 88px;
+}
+
+.customers-link {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--subtle-text-color);
+  border-radius: 4px;
+  color: var(--subtle-text-color);
+}
+
+.customers-svg {
+  fill: currentColor;
+}
+
+.customers-link:is(:hover, :focus) {
+  border-color: var(--pressed-state-color);
+  color: var(--pressed-state-color);
+}
+
 .footer {
   background: var(--dark-color);
-}
-.footer-container {
   padding-top: 100px;
   padding-bottom: 100px;
 }
+.footer-container {
+  display: flex;
+}
+.footer-title {
+  margin-right: 120px;
+}
+
 .footer-logo {
   font-family: "Raleway";
   font-weight: 800;
@@ -310,6 +411,46 @@ body {
   color: var(--accent-color);
   margin-top: 16px;
 }
+.footer-social {
+}
+
+.social-text {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #ffffff;
+  margin-bottom: 16px;
+}
+
+.social-list {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.social-item {
+  width: 40px;
+  height: 40px;
+}
+
+.social-link {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-link-icon {
+}
+
+.social-link:is(:hover, :focus) {
+  background-color: var(--success-color);
+}
+
 .filter {
 }
 .filter-heading {
@@ -362,6 +503,8 @@ body {
 }
 
 .card {
+  padding-top: 96px;
+  padding-bottom: 120px;
 }
 .card-list {
   display: flex;
@@ -373,6 +516,11 @@ body {
 }
 .card-item {
 }
+
+.card-item:is(:hover, :focus) {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
+}
+
 .card-link {
 }
 
