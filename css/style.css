@@ -465,23 +465,6 @@ body {
 
 .filter-item {
 }
-.filter-btn-all {
-  font-family: inherit;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.04em;
-  color: #ffffff;
-  background: var(--primary-brand-color);
-  cursor: pointer;
-  border: none;
-  padding: 12px 24px;
-  border-radius: 4px;
-}
-.filter-btn-all:hover,
-.filter-btn-all:focus {
-  background: var(--pressed-state-color);
-}
 
 .filter-btn {
   font-family: inherit;
@@ -500,6 +483,9 @@ body {
 .filter-btn:hover,
 .filter-btn:focus {
   background: var(--pressed-state-color);
+  color: #ffffff;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .card {
@@ -518,7 +504,8 @@ body {
 }
 
 .card-item:is(:hover, :focus) {
-  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .card-link {
@@ -530,6 +517,7 @@ body {
   padding-left: 16px;
   border: 1px solid var(--accent-color);
   border-top: 0;
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .card-title {
